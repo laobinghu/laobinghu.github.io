@@ -1,5 +1,6 @@
 ---
 title: 关于我
+layout: about
 date: 2023-1-12 05:56:26
 ---
 
@@ -30,6 +31,7 @@ date: 2023-1-12 05:56:26
 3. email:[邮箱一号](mailto:admin@laobinghu.top),[邮箱二号](mailto:admin@laobingstudio.top)
 
 ~~编不下去了溜溜球~~
+头像是NovelAI画的,画了一大堆,稍后传个教程😅
 
 ---
 
