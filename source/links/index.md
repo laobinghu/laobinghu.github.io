@@ -1,7 +1,7 @@
 ---
 date: 2023-01-20 20:46:35
-title: title
-updated: 2023-01-20 20:46:37
+title: 友情链接
+updated: 2023-01-20 20:47:15
 ---
 <div id="qexo-friends"></div>
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qexo-static@1.1.3/hexo/friends/friends.css"/>
