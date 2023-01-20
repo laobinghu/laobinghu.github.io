@@ -368,7 +368,7 @@ search:
   # 搜索的范围
   # Search field
   # Options: post | page | all
-  field: post
+  field: all
 
   # 搜索是否扫描正文
   # If true, search will scan the post content
@@ -948,7 +948,7 @@ about:
   banner_img: /img/default.png
   banner_img_height: 60
   banner_mask_alpha: 0.3
-  avatar: https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/20221227/pixil-frame-0-(1).1yyguov5b3y8.webp
+  avatar: https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/1674189768.2t4tko3umoa0.webp
   name: "烧瑚烙饼"
   intro: "但碎碎念尔"
   # 更多图标可从 https://hexo.fluid-dev.com/docs/icon/ 查找，`class` 代表图标的 css class，添加 `qrcode` 后，图标不再是链接而是悬浮二维码
