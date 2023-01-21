@@ -100,7 +100,7 @@ fun_features:
     # 在指定页面开启，不填则在所有页面开启
     # Enable in specified page, all pages by default
     # Options: home | post | tag | category | about | links | page | 404
-    scope: []
+    scope: [home]
 
   # 为文章内容中的标题添加锚图标
   # Add an anchor icon to the title on the post page
@@ -240,17 +240,17 @@ custom_css:
 # 网页访问统计
 # Analysis of website visitors
 web_analytics:  # 网页访问统计
-  enable: false
+  enable: true
 
   # 遵循访客浏览器"请勿追踪"的设置，如果开启则不统计其访问
   # Follow the "Do Not Track" setting of the visitor's browser
   # See: https://www.w3.org/TR/tracking-dnt/
-  follow_dnt: true
+  follow_dnt: false
 
   # 百度统计的 Key，值需要获取下方链接中 `hm.js?` 后边的字符串
   # Baidu analytics, get the string behind `hm.js?`
   # See: https://tongji.baidu.com/sc-web/10000033910/home/site/getjs?siteId=13751376
-  baidu:
+  baidu:d4178fa3ea45da13b9a08c6ded5c322c
 
   # Google 统计的 Tracking ID
   # Google analytics, set Tracking ID
@@ -429,6 +429,13 @@ footer:
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     <span>和烙饼满满的爱</span>
+    站点访问量 <span id="qexo-site-pv">Loading...</span>
+    站点访客数 <span id="qexo-site-uv">Loading...</span>
+    页面访问量 <span id="qexo-page-pv">Loading...</span>
+    <script src="https://cdn.jsdelivr.net/npm/qexo-static@1.3.0/hexo/statistic/statistic.min.js"></script>
+    <script>
+        loadStatistic("https://blog.admin.647382.xyz")
+    </script>
   '
 
   # 展示网站的 PV、UV 统计数
