@@ -429,6 +429,7 @@ footer:
     <i class="iconfont icon-love"></i>
     <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a>
     <span>和烙饼满满的爱</span>
+    <i class="iconfont icon-codeforces"></i>
     站点访问量 <span id="qexo-site-pv">Loading...</span>
     站点访客数 <span id="qexo-site-uv">Loading...</span>
     页面访问量 <span id="qexo-page-pv">Loading...</span>
