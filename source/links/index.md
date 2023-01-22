@@ -1,7 +1,8 @@
 ---
 date: 2023-01-20 20:46:35
+excerpt: '朋友们 友链申请 '
 title: 友情链接
-updated: 2023-01-21 11:58:42
+updated: 2023-01-22 16:40:11
 ---
 朋友们
 
@@ -13,5 +14,5 @@ updated: 2023-01-21 11:58:42
 友链申请
 
 <div id="friends-api"></div>
-<script src="https://npm.elemecdn.com/qexo-friends/friends-api.js"></script>
+<script src="https://unpkg.com/qexo-friends/friends-api.js"></script>
 <script>qexo_friend_api("friends-api","https://blog.admin.647382.xyz");</script>
