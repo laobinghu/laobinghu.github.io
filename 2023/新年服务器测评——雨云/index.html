@@ -1,0 +1,816 @@
+
+
+<!DOCTYPE html>
+<html lang="zh-CN" data-default-color-scheme=auto>
+
+
+
+<head>
+  <meta charset="UTF-8">
+  <link rel="apple-touch-icon" sizes="76x76" href="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/20221227/pixil-frame-0-(1).1yyguov5b3y8.webp">
+  <link rel="icon" href="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/20221227/pixil-frame-0-(1).1yyguov5b3y8.webp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, shrink-to-fit=no">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  
+  <meta name="theme-color" content="#2f4154">
+  <meta name="author" content="烧瑚烙饼">
+  <meta name="keywords" content="">
+  
+    <meta name="description" content="新年快乐 起因 ~~没事干了~~真的是没事干了🙂 然后就看见雨云在搞活动 于是便有了这篇文章 性能测逝 还不错把（雨云洛杉矶1区KVM标配版（数量不多，先到先得！）） 雨云的优势  简明美观的画面 专业的售后服务 亲民的价格 优质的产品 他甚至为你准备了页内Xterm.js和noVNC（是的这个远程窗口可以最小化而不打扰你查看页面上的其他东西） 抓药单  一个能接受短信的手机 一个脑子 本文章没">
+<meta property="og:type" content="article">
+<meta property="og:title" content="新年服务器测评——雨云">
+<meta property="og:url" content="https://www.laobinghu.top/2023/%E6%96%B0%E5%B9%B4%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84%E2%80%94%E2%80%94%E9%9B%A8%E4%BA%91/index.html">
+<meta property="og:site_name" content="烙饼的碎碎念">
+<meta property="og:description" content="新年快乐 起因 ~~没事干了~~真的是没事干了🙂 然后就看见雨云在搞活动 于是便有了这篇文章 性能测逝 还不错把（雨云洛杉矶1区KVM标配版（数量不多，先到先得！）） 雨云的优势  简明美观的画面 专业的售后服务 亲民的价格 优质的产品 他甚至为你准备了页内Xterm.js和noVNC（是的这个远程窗口可以最小化而不打扰你查看页面上的其他东西） 抓药单  一个能接受短信的手机 一个脑子 本文章没">
+<meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.webp">
+<meta property="og:image" content="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E9%9B%A8%E4%BA%91-%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A81.webp">
+<meta property="article:published_time" content="2023-01-21T03:59:12.000Z">
+<meta property="article:modified_time" content="2023-01-22T11:17:26.000Z">
+<meta property="article:author" content="烧瑚烙饼">
+<meta property="article:tag" content="白嫖">
+<meta property="article:tag" content="测评">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:image" content="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.webp">
+  
+  
+  
+  <title>新年服务器测评——雨云 - 烙饼的碎碎念</title>
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/twitter-bootstrap/4.6.1/css/bootstrap.min.css" />
+
+
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/github-markdown-css/4.0.0/github-markdown.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/hint.css/2.7.0/hint.min.css" />
+
+  <link  rel="stylesheet" href="https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.css" />
+
+
+
+<!-- 主题依赖的图标库，不要自行修改 -->
+<!-- Do not modify the link that theme dependent icons -->
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1749284_hj8rtnfg7um.css">
+
+
+
+<link rel="stylesheet" href="//at.alicdn.com/t/font_1736178_lbnruvf0jn.css">
+
+
+<link  rel="stylesheet" href="/css/main.css" />
+
+
+  <link id="highlight-css" rel="stylesheet" href="/css/highlight.css" />
+  
+    <link id="highlight-css-dark" rel="stylesheet" href="/css/highlight-dark.css" />
+  
+
+
+
+
+  <script id="fluid-configs">
+    var Fluid = window.Fluid || {};
+    Fluid.ctx = Object.assign({}, Fluid.ctx)
+    var CONFIG = {"hostname":"www.laobinghu.top","root":"/","version":"1.9.4","typing":{"enable":true,"typeSpeed":70,"cursorChar":"_","loop":true,"scope":["home"]},"anchorjs":{"enable":true,"element":"h1,h2,h3,h4,h5,h6","placement":"left","visible":"hover","icon":"#"},"progressbar":{"enable":true,"height_px":3,"color":"#29d","options":{"showSpinner":false,"trickleSpeed":100}},"code_language":{"enable":true,"default":"TEXT"},"copy_btn":true,"image_caption":{"enable":true},"image_zoom":{"enable":true,"img_url_replace":["",""]},"toc":{"enable":true,"placement":"right","headingSelector":"h1,h2,h3,h4,h5,h6","collapseDepth":0},"lazyload":{"enable":true,"loading_img":"/img/loading.gif","onlypost":false,"offset_factor":2},"web_analytics":{"enable":true,"follow_dnt":false,"baidu":"d4178fa3ea45da13b9a08c6ded5c322c","google":null,"gtag":null,"tencent":{"sid":null,"cid":null},"woyaola":null,"cnzz":null,"leancloud":{"app_id":null,"app_key":null,"server_url":null,"path":"window.location.pathname","ignore_local":false}},"search_path":"/local-search.xml"};
+
+    if (CONFIG.web_analytics.follow_dnt) {
+      var dntVal = navigator.doNotTrack || window.doNotTrack || navigator.msDoNotTrack;
+      Fluid.ctx.dnt = dntVal && (dntVal.startsWith('1') || dntVal.startsWith('yes') || dntVal.startsWith('on'));
+    }
+  </script>
+  <script  src="/js/utils.js" ></script>
+  <script  src="/js/color-schema.js" ></script>
+  
+
+  
+    <!-- Baidu Analytics -->
+    <script async>
+      if (!Fluid.ctx.dnt) {
+        var _hmt = _hmt || [];
+        (function() {
+          var hm = document.createElement("script");
+          hm.src = "https://hm.baidu.com/hm.js?d4178fa3ea45da13b9a08c6ded5c322c";
+          var s = document.getElementsByTagName("script")[0];
+          s.parentNode.insertBefore(hm, s);
+        })();
+      }
+    </script>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+
+
+  
+<meta name="generator" content="Hexo 6.3.0"></head>
+
+
+<body>
+  
+
+  <header>
+    
+
+<div class="header-inner" style="height: 70vh;">
+  <nav id="navbar" class="navbar fixed-top  navbar-expand-lg navbar-dark scrolling-navbar">
+  <div class="container">
+    <a class="navbar-brand" href="/">
+      <strong>烙饼的碎碎念</strong>
+    </a>
+
+    <button id="navbar-toggler-btn" class="navbar-toggler" type="button" data-toggle="collapse"
+            data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <div class="animated-icon"><span></span><span></span><span></span></div>
+    </button>
+
+    <!-- Collapsible content -->
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav ml-auto text-center">
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/">
+                <i class="iconfont icon-home-fill"></i>
+                <span>首页</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/archives/">
+                <i class="iconfont icon-archive-fill"></i>
+                <span>归档</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/categories/">
+                <i class="iconfont icon-category-fill"></i>
+                <span>分类</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/tags/">
+                <i class="iconfont icon-tags-fill"></i>
+                <span>标签</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/about/">
+                <i class="iconfont icon-user-fill"></i>
+                <span>关于</span>
+              </a>
+            </li>
+          
+        
+          
+          
+          
+          
+            <li class="nav-item">
+              <a class="nav-link" href="/links/">
+                <i class="iconfont icon-link-fill"></i>
+                <span>友链</span>
+              </a>
+            </li>
+          
+        
+        
+          <li class="nav-item" id="search-btn">
+            <a class="nav-link" target="_self" href="javascript:;" data-toggle="modal" data-target="#modalSearch" aria-label="Search">
+              <i class="iconfont icon-search"></i>
+            </a>
+          </li>
+          
+        
+        
+          <li class="nav-item" id="color-toggle-btn">
+            <a class="nav-link" target="_self" href="javascript:;" aria-label="Color Toggle">
+              <i class="iconfont icon-dark" id="color-toggle-icon"></i>
+            </a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+</nav>
+
+  
+
+<div id="banner" class="banner" parallax=true
+     style="background: url('/img/default.png') no-repeat center center; background-size: cover;">
+  <div class="full-bg-img">
+    <div class="mask flex-center" style="background-color: rgba(0, 0, 0, 0.3)">
+      <div class="banner-text text-center fade-in-up">
+        <div class="h2">
+          
+            <span id="subtitle">新年服务器测评——雨云</span>
+          
+        </div>
+
+        
+          
+  <div class="mt-3">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-author" aria-hidden="true"></i>
+        烧瑚烙饼
+      </span>
+    
+    
+      <span class="post-meta">
+        <i class="iconfont icon-date-fill" aria-hidden="true"></i>
+        <time datetime="2023-01-21 11:59" pubdate>
+          2023年1月21日 中午
+        </time>
+      </span>
+    
+  </div>
+
+  <div class="mt-1">
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-chart"></i>
+        
+          908 字
+        
+      </span>
+    
+
+    
+      <span class="post-meta mr-2">
+        <i class="iconfont icon-clock-fill"></i>
+        
+        
+        
+          8 分钟
+        
+      </span>
+    
+
+    
+    
+  </div>
+
+
+        
+      </div>
+
+      
+    </div>
+  </div>
+</div>
+
+</div>
+
+  </header>
+
+  <main>
+    
+      
+
+<div class="container-fluid nopadding-x">
+  <div class="row nomargin-x">
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+
+    </div>
+
+    <div class="col-lg-8 nopadding-x-md">
+      <div class="container nopadding-x-md" id="board-ctn">
+        <div id="board">
+          <article class="post-content mx-auto">
+            <!-- SEO header -->
+            <h1 style="display: none">新年服务器测评——雨云</h1>
+            
+            
+              <div class="markdown-body">
+                
+                <h1 id="新年快乐"><a href="#新年快乐" class="headerlink" title="新年快乐"></a>新年快乐</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p><del>没事干了</del>真的是没事干了🙂</p>
+<p>然后就看见雨云在搞活动</p>
+<p>于是便有了这篇文章</p>
+<h2 id="性能测逝"><a href="#性能测逝" class="headerlink" title="性能测逝"></a>性能测逝</h2><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.webp" srcset="/img/loading.gif" lazyload alt="服务器性能测试2"></p>
+<p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.webp" srcset="/img/loading.gif" lazyload alt="服务器性能测试1"></p>
+<p>还不错把（雨云洛杉矶1区KVM标配版（数量不多，先到先得！））</p>
+<h2 id="雨云的优势"><a href="#雨云的优势" class="headerlink" title="雨云的优势"></a>雨云的优势</h2><ul>
+<li>简明美观的画面</li>
+<li>专业的售后服务</li>
+<li>亲民的价格</li>
+<li>优质的产品</li>
+<li>他甚至为你准备了页内Xterm.js和noVNC（是的这个远程窗口可以最小化而不打扰你查看页面上的其他东西）</li>
+</ul>
+<h2 id="抓药单"><a href="#抓药单" class="headerlink" title="抓药单"></a>抓药单</h2><ol>
+<li>一个能接受短信的手机</li>
+<li>一个脑子</li>
+</ol>
+<p><mark>本文章没有任何恰饭行为，服务器均为资费购买！</mark></p>
+<h2 id="你要做的"><a href="#你要做的" class="headerlink" title="你要做的"></a>你要做的</h2><ol>
+<li>注册</li>
+</ol>
+<blockquote>
+<p>雨云四周年活动优惠持续发布</p>
+<p>现在加入雨云最高享受7折优惠</p>
+<p>&#x3D;&#x3D;云服务器特惠: 1h1g 50m 15元&#x2F;月</p>
+<p>2h2g 100m 20元&#x2F;月(本期测试，需加优惠券)</p>
+<p>(免备案,预装宝塔,支持windows)</p>
+<p>&#x3D;&#x3D;虚拟主机特惠:1h512m 20m 10元&#x2F;月</p>
+<p>2h1g 50m 20元&#x2F;月(免备案,预装宝塔)</p>
+<p>&#x3D;&#x3D;使用优惠通道 <a target="_blank" rel="noopener" href="https://www.rainyun.com/?ref=MTYzNjM=">https://www.rainyun.com/?ref=MTYzNjM=</a></p>
+<p>注册立即领取无门槛5元代金券</p>
+<p><del>你看我都自费了回点血总可以罢</del></p>
+</blockquote>
+<ol start="2">
+<li><p>将鼠标移至头像处，在弹出的下拉框中选择修改资料</p>
+</li>
+<li><p>点击左侧侧边栏的绑定微信&amp;QQ（或类似字眼），点击右侧“绑定微信“中的“去绑定”（演示图中为绑定过后的图，仅作为操作步骤指示）</p>
+</li>
+<li><p>使用微信扫描弹出的二维码，按照指示关注”雨云“公众号，待提示”绑定成功“的字眼后即可返回浏览器继续操作</p>
+</li>
+<li><p>点击”计算 COMPUTE“→”云服务器“（或其他你感兴趣的）→”云服务器“旁边的立即购买</p>
+<p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E9%9B%A8%E4%BA%91-%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A81.webp" srcset="/img/loading.gif" lazyload alt="雨云-购买服务器1"></p>
+</li>
+<li><p>你将会进入到配置选择界面</p>
+<table>
+<thead>
+<tr>
+<th>\</th>
+<th>洛杉矶2区</th>
+<th>洛杉矶1区</th>
+<th>香港</th>
+<th>华北(宿迁)</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>高防</td>
+<td>有，需独立购买</td>
+<td>无</td>
+<td>无</td>
+<td>？</td>
+</tr>
+<tr>
+<td>带宽</td>
+<td>中</td>
+<td>大</td>
+<td>小</td>
+<td>中</td>
+</tr>
+<tr>
+<td>独立IP</td>
+<td>需独立购买</td>
+<td>需独立购买</td>
+<td>需独立购买</td>
+<td>需独立购买</td>
+</tr>
+</tbody></table>
+</li>
+<li><p>按需购买（使用券购买费用更省哦）</p>
+</li>
+<li><p>另外：雨云新春活动，可以在<a target="_blank" rel="noopener" href="https://app.rainyun.com/account/reward/store">这里</a>使用积分换优惠券&#x2F;免费的东西！</p>
+</li>
+<li><p>还有使用雨云的产品可以白嫖雨云的CDN哦</p>
+</li>
+</ol>
+<h2 id="白嫖人的福利"><a href="#白嫖人的福利" class="headerlink" title="白嫖人的福利"></a>白嫖人的福利</h2><p>你可以在<a target="_blank" rel="noopener" href="https://app.rainyun.com/account/reward/store">积分商城</a>里领取包括但不限于积分红包&#x2F;免费游戏云服务器&#x2F;CDN流量包&#x2F;虚拟主机&#x2F;优惠券等</p>
+<p>还是那句话：先到先得</p>
+<h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>球球了让孩子回点血把awa(该文章耗时六小时编写，球球你们了)</p>
+
+                
+              </div>
+            
+            <hr/>
+            <div>
+              <div class="post-metas my-3">
+  
+    <div class="post-meta mr-3 d-flex align-items-center">
+      <i class="iconfont icon-category"></i>
+      
+
+<span class="category-chains">
+  
+  
+    
+      <span class="category-chain">
+        
+  <a href="/categories/%E6%B5%8B%E8%AF%84/" class="category-chain-item">测评</a>
+  
+  
+
+      </span>
+    
+  
+</span>
+
+    </div>
+  
+  
+    <div class="post-meta">
+      <i class="iconfont icon-tags"></i>
+      
+        <a href="/tags/%E7%99%BD%E5%AB%96/">#白嫖</a>
+      
+        <a href="/tags/%E6%B5%8B%E8%AF%84/">#测评</a>
+      
+    </div>
+  
+</div>
+
+
+              
+  
+
+  <div class="license-box my-3">
+    <div class="license-title">
+      <div>新年服务器测评——雨云</div>
+      <div>https://www.laobinghu.top/2023/新年服务器测评——雨云/</div>
+    </div>
+    <div class="license-meta">
+      
+        <div class="license-meta-item">
+          <div>作者</div>
+          <div>烧瑚烙饼</div>
+        </div>
+      
+      
+        <div class="license-meta-item license-meta-date">
+          <div>发布于</div>
+          <div>2023年1月21日</div>
+        </div>
+      
+      
+      
+        <div class="license-meta-item">
+          <div>许可协议</div>
+          <div>
+            
+              
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="BY - 署名">
+                    <i class="iconfont icon-by"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="NC - 非商业性使用">
+                    <i class="iconfont icon-nc"></i>
+                  </span>
+                </a>
+              
+                <a target="_blank" href="https://creativecommons.org/licenses/by-nc-sa/4.0/">
+                  <span class="hint--top hint--rounded" aria-label="SA - 相同方式共享">
+                    <i class="iconfont icon-sa"></i>
+                  </span>
+                </a>
+              
+            
+          </div>
+        </div>
+      
+    </div>
+    <div class="license-icon iconfont"></div>
+  </div>
+
+
+
+              
+                <div class="post-prevnext my-3">
+                  <article class="post-prev col-6">
+                    
+                    
+                      <a href="/2023/%E5%A4%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B2%A1%E5%A4%84%E7%94%A8%EF%BC%9F%E5%BF%AB%E6%9D%A5%E9%80%9D%E4%B8%96%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90!/" title="多的服务器没处用？快来逝世自建梯子!">
+                        <i class="iconfont icon-arrowleft"></i>
+                        <span class="hidden-mobile">多的服务器没处用？快来逝世自建梯子!</span>
+                        <span class="visible-mobile">上一篇</span>
+                      </a>
+                    
+                  </article>
+                  <article class="post-next col-6">
+                    
+                    
+                      <a href="/2023/%E5%BF%AB%E6%9D%A5%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E7%99%BD%E5%AB%96GPU%E7%AE%97%E5%8A%9B!%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8ENovelAI%E7%94%BB%E7%94%BB!/" title="快来百度飞桨白嫖GPU算力!可以用于NovelAI画画!">
+                        <span class="hidden-mobile">快来百度飞桨白嫖GPU算力!可以用于NovelAI画画!</span>
+                        <span class="visible-mobile">下一篇</span>
+                        <i class="iconfont icon-arrowright"></i>
+                      </a>
+                    
+                  </article>
+                </div>
+              
+            </div>
+
+            
+  
+  
+    <article id="comments" lazyload>
+      
+  <div id="waline"></div>
+  <script type="text/javascript">
+    Fluid.utils.loadComments('#waline', function() {
+      Fluid.utils.createCssLink('https://lib.baomitu.com/waline/2.14.1/waline.min.css')
+      Fluid.utils.createScript('https://lib.baomitu.com/waline/2.14.1/waline.min.js', function() {
+        var options = Object.assign(
+          {"serverURL":"waline.647382.xyz","path":"window.location.pathname","meta":["nick","mail","link"],"requiredMeta":["nick"],"lang":"zh-CN","emoji":["https://cdn.jsdelivr.net/gh/walinejs/emojis/weibo"],"dark":"html[data-user-color-scheme=\"dark\"]","wordLimit":0,"pageSize":10},
+          {
+            el: '#waline',
+            path: window.location.pathname
+          }
+        )
+        Waline.init(options);
+        Fluid.utils.waitElementVisible('#waline .vcontent', () => {
+          var imgSelector = '#waline .vcontent img:not(.vemoji)';
+          Fluid.plugins.imageCaption(imgSelector);
+          Fluid.plugins.fancyBox(imgSelector);
+        })
+      });
+    });
+  </script>
+  <noscript>Please enable JavaScript to view the comments</noscript>
+
+
+    </article>
+  
+
+
+          </article>
+        </div>
+      </div>
+    </div>
+
+    <div class="side-col d-none d-lg-block col-lg-2">
+      
+  <aside class="sidebar" style="margin-left: -1rem">
+    <div id="toc">
+  <p class="toc-header">
+    <i class="iconfont icon-list"></i>
+    <span>目录</span>
+  </p>
+  <div class="toc-body" id="toc-body"></div>
+</div>
+
+
+
+  </aside>
+
+
+    </div>
+  </div>
+</div>
+
+
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+  
+
+
+
+
+
+
+
+    
+
+    
+      <a id="scroll-top-button" aria-label="TOP" href="#" role="button">
+        <i class="iconfont icon-arrowup" aria-hidden="true"></i>
+      </a>
+    
+
+    
+      <div class="modal fade" id="modalSearch" tabindex="-1" role="dialog" aria-labelledby="ModalLabel"
+     aria-hidden="true">
+  <div class="modal-dialog modal-dialog-scrollable modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">搜索</h4>
+        <button type="button" id="local-search-close" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <input type="text" id="local-search-input" class="form-control validate">
+          <label data-error="x" data-success="v" for="local-search-input">关键词</label>
+        </div>
+        <div class="list-group" id="local-search-result"></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+    
+
+    
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+  
+    <div class="footer-content">
+       <span>使用了</span> <a href="https://hexo.io" target="_blank" rel="nofollow noopener"><span>Hexo</span></a> <i class="iconfont icon-love"></i> <a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="nofollow noopener"><span>Fluid</span></a> <span>和烙饼满满的爱</span> <i class="iconfont icon-codeforces"></i> 站点访问量 <span id="qexo-site-pv">Loading...</span> 站点访客数 <span id="qexo-site-uv">Loading...</span> 页面访问量 <span id="qexo-page-pv">Loading...</span> <script src="https://cdn.jsdelivr.net/npm/qexo-static@1.3.0/hexo/statistic/statistic.min.js"></script> <script> loadStatistic("https://blog.admin.647382.xyz") </script> 
+    </div>
+  
+  
+  
+  
+</div>
+
+  </footer>
+
+  <!-- Scripts -->
+  
+  <script  src="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.js" ></script>
+  <link  rel="stylesheet" href="https://lib.baomitu.com/nprogress/0.2.0/nprogress.min.css" />
+
+  <script>
+    NProgress.configure({"showSpinner":false,"trickleSpeed":100})
+    NProgress.start()
+    window.addEventListener('load', function() {
+      NProgress.done();
+    })
+  </script>
+
+
+<script  src="https://lib.baomitu.com/jquery/3.6.0/jquery.min.js" ></script>
+<script  src="https://lib.baomitu.com/twitter-bootstrap/4.6.1/js/bootstrap.min.js" ></script>
+<script  src="/js/events.js" ></script>
+<script  src="/js/plugins.js" ></script>
+
+
+
+
+
+  
+    <script  src="/js/img-lazyload.js" ></script>
+  
+
+
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/tocbot/4.18.2/tocbot.min.js', function() {
+    var toc = jQuery('#toc');
+    if (toc.length === 0 || !window.tocbot) { return; }
+    var boardCtn = jQuery('#board-ctn');
+    var boardTop = boardCtn.offset().top;
+
+    window.tocbot.init(Object.assign({
+      tocSelector     : '#toc-body',
+      contentSelector : '.markdown-body',
+      linkClass       : 'tocbot-link',
+      activeLinkClass : 'tocbot-active-link',
+      listClass       : 'tocbot-list',
+      isCollapsedClass: 'tocbot-is-collapsed',
+      collapsibleClass: 'tocbot-is-collapsible',
+      scrollSmooth    : true,
+      includeTitleTags: true,
+      headingsOffset  : -boardTop,
+    }, CONFIG.toc));
+    if (toc.find('.toc-list-item').length > 0) {
+      toc.css('visibility', 'visible');
+    }
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('tocbot' in window) {
+        tocbot.refresh();
+        var toc = jQuery('#toc');
+        if (toc.length === 0 || !tocbot) {
+          return;
+        }
+        if (toc.find('.toc-list-item').length > 0) {
+          toc.css('visibility', 'visible');
+        }
+      }
+    });
+  });
+</script>
+
+
+  <script src=https://lib.baomitu.com/clipboard.js/2.0.11/clipboard.min.js></script>
+
+  <script>Fluid.plugins.codeWidget();</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/anchor-js/4.3.1/anchor.min.js', function() {
+    window.anchors.options = {
+      placement: CONFIG.anchorjs.placement,
+      visible  : CONFIG.anchorjs.visible
+    };
+    if (CONFIG.anchorjs.icon) {
+      window.anchors.options.icon = CONFIG.anchorjs.icon;
+    }
+    var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+    var res = [];
+    for (var item of el) {
+      res.push('.markdown-body > ' + item.trim());
+    }
+    if (CONFIG.anchorjs.placement === 'left') {
+      window.anchors.options.class = 'anchorjs-link-left';
+    }
+    window.anchors.add(res.join(', '));
+
+    Fluid.events.registerRefreshCallback(function() {
+      if ('anchors' in window) {
+        anchors.removeAll();
+        var el = (CONFIG.anchorjs.element || 'h1,h2,h3,h4,h5,h6').split(',');
+        var res = [];
+        for (var item of el) {
+          res.push('.markdown-body > ' + item.trim());
+        }
+        if (CONFIG.anchorjs.placement === 'left') {
+          anchors.options.class = 'anchorjs-link-left';
+        }
+        anchors.add(res.join(', '));
+      }
+    });
+  });
+</script>
+
+
+  
+<script>
+  Fluid.utils.createScript('https://lib.baomitu.com/fancybox/3.5.7/jquery.fancybox.min.js', function() {
+    Fluid.plugins.fancyBox();
+  });
+</script>
+
+
+  <script>Fluid.plugins.imageCaption();</script>
+
+  <script  src="/js/local-search.js" ></script>
+
+
+
+
+
+<!-- 主题的启动项，将它保持在最底部 -->
+<!-- the boot of the theme, keep it at the bottom -->
+<script  src="/js/boot.js" ></script>
+
+
+  
+
+  <noscript>
+    <div class="noscript-warning">博客在允许 JavaScript 运行的环境下浏览效果更佳</div>
+  </noscript>
+</body>
+</html>
