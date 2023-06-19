@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<search>
+  
+  
+  
+  <entry>
+    <title>多的服务器没处用？快来逝世自建梯子!</title>
+    <link href="/2023/%E5%A4%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B2%A1%E5%A4%84%E7%94%A8%EF%BC%9F%E5%BF%AB%E6%9D%A5%E9%80%9D%E4%B8%96%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90!/"/>
+    <url>/2023/%E5%A4%9A%E7%9A%84%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B2%A1%E5%A4%84%E7%94%A8%EF%BC%9F%E5%BF%AB%E6%9D%A5%E9%80%9D%E4%B8%96%E8%87%AA%E5%BB%BA%E6%A2%AF%E5%AD%90!/</url>
+    
+    <content type="html"><![CDATA[<p>你还在因机场太贵而发愁吗？快来看看这个！</p><p>废话不多说直接开始（</p><h2 id="必读"><a href="#必读" class="headerlink" title="必读"></a>必读</h2><p>不要使用大厂的服务器！不要使用大厂的服务器！不要使用大厂的服务器！</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E8%A1%80%E7%9A%84%E6%95%99%E8%AE%AD.webp" alt="血的教训"></p><h2 id="你需要的"><a href="#你需要的" class="headerlink" title="你需要的"></a>你需要的</h2><ol><li>一台会留学的服务器(最好是<del>不知名idc的</del>或dd纯净镜像重装过的)</li><li>一个脑子</li></ol><h2 id="食谱"><a href="#食谱" class="headerlink" title="食谱(?)"></a>食谱(?)</h2><ol><li><p>使用趁手的ssh工具连接服务器</p></li><li><p>粘贴并执行一下命令：<br><code>bash &lt;(curl -Ls https://raw.githubusercontent.com/vaxilu/x-ui/master/install.sh)</code></p></li><li><p>当出现</p><blockquote><p>出于安全考虑，安装&#x2F;更新完成后需要强制修改端口与账户密码<br>确认是否继续?[y&#x2F;n]:</p></blockquote><p>时，可根据具体需求输入y(即继续)或n（即跳过）</p></li><li><p>在浏览器输入[服务器IP]:[你设定的端口],在显示页面上输入你设定的密码并点击登陆即可进入x-ui的后台（无法访问请关闭服务器防火墙或在安全组放行相关端口）</p></li><li><p>点击入站列表-蓝色加号,在弹出的窗口中填写一下信息：</p><p>备注：识别用，随便填</p><p>协议：可以使用自己喜欢的，选择困难症可以和我一样选trojan</p></li><li><p>选trojan的需要填写一下信息：</p><p>域名:填写自己的，当然你也可以到<a href="https://二级域名.ink/">这里</a>白嫖</p><p>公钥&#x2F;密钥内容：需选中file content，填写自行申请的ssl证书内容</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/QQ%E6%88%AA%E5%9B%BE20230203162229.webp" alt="QQ截图20230203162229"></p></li><li><p>恭喜!配置完成！</p></li></ol>]]></content>
+    
+    
+    <categories>
+      
+      <category>教程</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>教程</tag>
+      
+      <tag>梯子</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>新年服务器测评——雨云</title>
+    <link href="/2023/%E6%96%B0%E5%B9%B4%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84%E2%80%94%E2%80%94%E9%9B%A8%E4%BA%91/"/>
+    <url>/2023/%E6%96%B0%E5%B9%B4%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%B5%8B%E8%AF%84%E2%80%94%E2%80%94%E9%9B%A8%E4%BA%91/</url>
+    
+    <content type="html"><![CDATA[<h1 id="新年快乐"><a href="#新年快乐" class="headerlink" title="新年快乐"></a>新年快乐</h1><h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p><del>没事干了</del>真的是没事干了🙂</p><p>然后就看见雨云在搞活动</p><p>于是便有了这篇文章</p><h2 id="性能测逝"><a href="#性能测逝" class="headerlink" title="性能测逝"></a>性能测逝</h2><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%952.webp" alt="服务器性能测试2"></p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E6%9C%8D%E5%8A%A1%E5%99%A8%E6%80%A7%E8%83%BD%E6%B5%8B%E8%AF%951.webp" alt="服务器性能测试1"></p><p>还不错把（雨云洛杉矶1区KVM标配版（数量不多，先到先得！））</p><h2 id="雨云的优势"><a href="#雨云的优势" class="headerlink" title="雨云的优势"></a>雨云的优势</h2><ul><li>简明美观的画面</li><li>专业的售后服务</li><li>亲民的价格</li><li>优质的产品</li><li>他甚至为你准备了页内Xterm.js和noVNC（是的这个远程窗口可以最小化而不打扰你查看页面上的其他东西）</li></ul><h2 id="抓药单"><a href="#抓药单" class="headerlink" title="抓药单"></a>抓药单</h2><ol><li>一个能接受短信的手机</li><li>一个脑子</li></ol><p><mark>本文章没有任何恰饭行为，服务器均为资费购买！</mark></p><h2 id="你要做的"><a href="#你要做的" class="headerlink" title="你要做的"></a>你要做的</h2><ol><li>注册</li></ol><blockquote><p>雨云四周年活动优惠持续发布</p><p>现在加入雨云最高享受7折优惠</p><p>&#x3D;&#x3D;云服务器特惠: 1h1g 50m 15元&#x2F;月</p><p>2h2g 100m 20元&#x2F;月(本期测试，需加优惠券)</p><p>(免备案,预装宝塔,支持windows)</p><p>&#x3D;&#x3D;虚拟主机特惠:1h512m 20m 10元&#x2F;月</p><p>2h1g 50m 20元&#x2F;月(免备案,预装宝塔)</p><p>&#x3D;&#x3D;使用优惠通道 <a href="https://www.rainyun.com/?ref=MTYzNjM=">https://www.rainyun.com/?ref=MTYzNjM=</a></p><p>注册立即领取无门槛5元代金券</p><p><del>你看我都自费了回点血总可以罢</del></p></blockquote><ol start="2"><li><p>将鼠标移至头像处，在弹出的下拉框中选择修改资料</p></li><li><p>点击左侧侧边栏的绑定微信&amp;QQ（或类似字眼），点击右侧“绑定微信“中的“去绑定”（演示图中为绑定过后的图，仅作为操作步骤指示）</p></li><li><p>使用微信扫描弹出的二维码，按照指示关注”雨云“公众号，待提示”绑定成功“的字眼后即可返回浏览器继续操作</p></li><li><p>点击”计算 COMPUTE“→”云服务器“（或其他你感兴趣的）→”云服务器“旁边的立即购买</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E9%9B%A8%E4%BA%91-%E8%B4%AD%E4%B9%B0%E6%9C%8D%E5%8A%A1%E5%99%A81.webp" alt="雨云-购买服务器1"></p></li><li><p>你将会进入到配置选择界面</p><table><thead><tr><th>\</th><th>洛杉矶2区</th><th>洛杉矶1区</th><th>香港</th><th>华北(宿迁)</th></tr></thead><tbody><tr><td>高防</td><td>有，需独立购买</td><td>无</td><td>无</td><td>？</td></tr><tr><td>带宽</td><td>中</td><td>大</td><td>小</td><td>中</td></tr><tr><td>独立IP</td><td>需独立购买</td><td>需独立购买</td><td>需独立购买</td><td>需独立购买</td></tr></tbody></table></li><li><p>按需购买（使用券购买费用更省哦）</p></li><li><p>另外：雨云新春活动，可以在<a href="https://app.rainyun.com/account/reward/store">这里</a>使用积分换优惠券&#x2F;免费的东西！</p></li><li><p>还有使用雨云的产品可以白嫖雨云的CDN哦</p></li></ol><h2 id="白嫖人的福利"><a href="#白嫖人的福利" class="headerlink" title="白嫖人的福利"></a>白嫖人的福利</h2><p>你可以在<a href="https://app.rainyun.com/account/reward/store">积分商城</a>里领取包括但不限于积分红包&#x2F;免费游戏云服务器&#x2F;CDN流量包&#x2F;虚拟主机&#x2F;优惠券等</p><p>还是那句话：先到先得</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>球球了让孩子回点血把awa(该文章耗时六小时编写，球球你们了)</p>]]></content>
+    
+    
+    <categories>
+      
+      <category>测评</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>白嫖</tag>
+      
+      <tag>测评</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>快来百度飞桨白嫖GPU算力!可以用于NovelAI画画!</title>
+    <link href="/2023/%E5%BF%AB%E6%9D%A5%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E7%99%BD%E5%AB%96GPU%E7%AE%97%E5%8A%9B!%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8ENovelAI%E7%94%BB%E7%94%BB!/"/>
+    <url>/2023/%E5%BF%AB%E6%9D%A5%E7%99%BE%E5%BA%A6%E9%A3%9E%E6%A1%A8%E7%99%BD%E5%AB%96GPU%E7%AE%97%E5%8A%9B!%E5%8F%AF%E4%BB%A5%E7%94%A8%E4%BA%8ENovelAI%E7%94%BB%E7%94%BB!/</url>
+    
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>最近烙饼在写小说，然而小说的人设没有立绘😭</p><p>于是这货便去网上寻找教程</p><p>教程是找到了，结果使用的NovelAI需要强悍的显卡性能(蓝厂UHD 620瑟瑟发抖)</p><p>不过好在B站up主<a href="https://https//space.bilibili.com/13792564">哲生在世</a>找到了<del>薅飞桨算力</del>的方法，并提供了详细的教程</p><p>于是便有了这篇文章（</p><h2 id="你需要的"><a href="#你需要的" class="headerlink" title="你需要的"></a>你需要的</h2><p>百度账号*1</p><p>任意联网设备*1（是的手机也可以）</p><p>一个IQ正常的脑子</p><h2 id="先上成果"><a href="#先上成果" class="headerlink" title="先上成果"></a>先上成果</h2><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/1674189768.2t4tko3umoa0.webp" alt="某个人的新头像"></p><p>某个人的新头像</p><hr><h2 id="详细"><a href="#详细" class="headerlink" title="详细"></a>详细</h2><ol><li><p>打开<a href="https://aistudio.baidu.com/aistudio/projectdetail/4666819?channel=0&channelType=0&sUid=3322439&shared=1&ts=1674225368978">项目地址</a></p></li><li><p>点击”运行一下”</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-1.webp" alt="白嫖NovelAI-1"></p></li><li><p>按照要求登陆</p></li><li><p>在“选择运行环境”时选择V100 16GB&#x2F;32GB<br>区别:32g最大能画704×1024或512×1024长的,16g则不能😂</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-2.webp" alt="白嫖NovelAI-2"></p></li><li><p>等待提示“环境启动成功”后点击”进入“或类似字眼</p></li><li><p>然后你便会进入到到这个界面</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-3.webp" alt="白嫖NovelAI-3"></p></li><li><p>往下翻到图示处，并将鼠标移至一对方括号出，点击出现的开始运行</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-4.webp" alt="白嫖NovelAI-4"></p></li><li><p>待提示“加载完毕，请重启内核”时，点击上方的重启内核</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-5.webp" alt="白嫖NovelAI-5"></p></li><li><p>再往下翻，翻到图示界面</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-6.webp" alt="白嫖NovelAI-6"></p></li><li><p>下面你有两个选择:给出文字，AI作画（文生图）和给出图片，AI二次创作（图生图）<img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-6.webp" alt="白嫖NovelAI-6"></p><h2 id="文生图"><a href="#文生图" class="headerlink" title="文生图"></a>文生图</h2><ol><li><p>将鼠标移至一对方括号出，点击出现的开始运行</p></li><li><p>待出现这个界面时你便可以在prompt框内输入你对这个角色的特征（英文）了</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/%E7%99%BD%E5%AB%96NovelAI-7.webp" alt="白嫖NovelAI-7"></p></li><li><p>输入完后点击“点击生成图片”即可获得一张画（不满意？再点一下“点击生成图片“即可）</p><h2 id="图生图"><a href="#图生图" class="headerlink" title="图生图"></a>图生图</h2><p>方法与文生图类似，但是需要把原图片上传到根目录</p></li></ol></li></ol><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>想不到啊awa</p><p>那放两张AI做的图罢</p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/1674189324.3xsoov8ozbs0.webp" alt="1674189324"></p><p><img src="https://cdn.staticaly.com/gh/laobinghu/pic_bed@main/1674189457.709udpkvmqg0.webp" alt="1674189457"></p>]]></content>
+    
+    
+    <categories>
+      
+      <category>日常</category>
+      
+      <category>白嫖</category>
+      
+    </categories>
+    
+    
+    <tags>
+      
+      <tag>白嫖</tag>
+      
+      <tag>NovalAI</tag>
+      
+    </tags>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>游侠开始收费,局域网联机还有未来吗?(1)</title>
+    <link href="/2023/%E6%B8%B8%E4%BE%A0%E5%BC%80%E5%A7%8B%E6%94%B6%E8%B4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E8%81%94%E6%9C%BA%E8%BF%98%E6%9C%89%E6%9C%AA%E6%9D%A5%E5%90%97-1/"/>
+    <url>/2023/%E6%B8%B8%E4%BE%A0%E5%BC%80%E5%A7%8B%E6%94%B6%E8%B4%B9-%E5%B1%80%E5%9F%9F%E7%BD%91%E8%81%94%E6%9C%BA%E8%BF%98%E6%9C%89%E6%9C%AA%E6%9D%A5%E5%90%97-1/</url>
+    
+    <content type="html"><![CDATA[]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>扬帆再起航</title>
+    <link href="/2022/%E6%89%AC%E5%B8%86%E5%86%8D%E8%B5%B7%E8%88%AA/"/>
+    <url>/2022/%E6%89%AC%E5%B8%86%E5%86%8D%E8%B5%B7%E8%88%AA/</url>
+    
+    <content type="html"><![CDATA[<h2 id="起因"><a href="#起因" class="headerlink" title="起因"></a>起因</h2><p>作为一个建站时间两年半的<del>个人练习生</del>站长，自然是没少体验免费的主只因。<br>但这些免费主机大多没长久存在，或是跑路，或是被我遗忘在了历史的长河之中。</p><p>之前也是使用typecho搭建过博客，结果后面服务商的上游——也就是机房的客服🐏了，导致我的服务器出问题了也没人修。于是我一气之下就把剩下没用的配额给退了，然后就有了用hexo搭建静态博客（也就是这个）的事了</p><h2 id="计划"><a href="#计划" class="headerlink" title="计划"></a>计划</h2><p>只要没有特殊情况，这个博客我尽可能不会放弃的</p><h2 id="结语"><a href="#结语" class="headerlink" title="结语"></a>结语</h2><p>不知5年后，也许是我高考完了以后，会有多少文字的结晶呢？</p>]]></content>
+    
+    
+    
+  </entry>
+  
+  
+  
+  
+  
+  
+  <entry>
+    <title>关于我</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<h1 id="我是谁"><a href="#我是谁" class="headerlink" title="我是谁"></a>我是谁</h1><p>鄙人烧瑚烙饼，可称鄙人为烙饼，<del>吾之熟人亦呼之为电教冤魂</del></p><p>目前14岁</p><h2 id="我的身份"><a href="#我的身份" class="headerlink" title="我的身份"></a>我的身份</h2><ol><li><p>初二在读学生</p></li><li><p>班级电教<del>冤魂</del>委员</p></li><li><p>LaobingStudio 创始人&#x2F;室长</p></li><li><p>ShutdownStudio&#x2F;萤火科技工作室 成员</p></li></ol><h2 id="如何联系我"><a href="#如何联系我" class="headerlink" title="如何联系我"></a>如何联系我</h2><p>你可以通过以下方式找到我：</p><ol><li><p>🐧号:<del>114514</del>暂不透露</p></li><li><p>微信:别看了,我不怎么用</p></li><li><p>email:<a href="mailto:admin@laobinghu.top">邮箱一号</a>,<a href="mailto:admin@laobingstudio.top">邮箱二号</a></p></li></ol><p><del>编不下去了溜溜球</del><br>头像是NovelAI画的,画了一大堆,稍后传个教程😅</p><hr><p><mark>本博客全文使用CC4.0 BY-NC-SA协议发布</mark></p>]]></content>
+    
+  </entry>
+  
+  
+  
+  <entry>
+    <title>友情链接</title>
+    <link href="/"/>
+    <url>/</url>
+    
+    <content type="html"><![CDATA[<p>朋友们</p><div id="qexo-friends"></div><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/qexo-static@1.1.3/hexo/friends/friends.css"/><script src="https://cdn.jsdelivr.net/npm/qexo-static@1.1.3/hexo/friends/friends.js"></script><script>loadQexoFriends("qexo-friends", "https://blog.admin.647382.xyz")</script><p>友链申请</p><p>我方格式如下:</p><blockquote><p>网址：<a href="http://www.laobinghu.top/">www.laobinghu.top</a><br>名称：烙饼的碎碎念<br>介绍：但碎碎念尔<br>头像：cdn.staticaly.com&#x2F;gh&#x2F;laobinghu&#x2F;pic_bed@main&#x2F;20221227&#x2F;pixil-frame-0-(1).1yyguov5b3y8.webp</p></blockquote><div id="friends-api"></div><script src="https://unpkg.com/qexo-friends/friends-api.js"></script><script>qexo_friend_api("friends-api","https://blog.admin.647382.xyz");</script>]]></content>
+    
+  </entry>
+  
+  
+  
+</search>
